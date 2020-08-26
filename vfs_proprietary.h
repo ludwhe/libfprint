@@ -20,7 +20,6 @@
 #ifndef VFS_PROPRIETARY_H_
 #define VFS_PROPRIETARY_H_
 
-
 #define VALIDITY_VENDOR_ID          0x138A
 // #define VALIDITY_PRODUCT_ID_301     0x0005  // FLOSS implementation exists
 #define VALIDITY_PRODUCT_ID_451     0x0007
@@ -46,6 +45,5 @@
 // #define VCS_MAX_FINGER              10  // not used
 // #define MAX_ENROLLMENT_PRINTS       3  // not used
 // #define MAX_TEMPLATES               10  // not used
-
 
 #endif /* VFS_PROPRIETARY_H_ */

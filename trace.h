@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright 2018  Jan Chren (rindeal)
+/** * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,9 +18,7 @@
 #ifndef _TRACE_H_
 #define _TRACE_H_
 
-
 #include <stdio.h>
-
 
 // https://stackoverflow.com/a/41367919/2566213
 #define _TRACE_STRIPPATH_(s) \
@@ -284,14 +281,12 @@
 		(s) \
 	)
 
-
 #if defined( VFS_PROPRIETARY_TRACE )
-   // this second macro is needed for TRACE()'s zero argument support
+// this second macro is needed for TRACE()'s zero argument support
 #  define TRACE_(format_, ...) fprintf(stderr, "TRACE %s: %s() [%d] " format_ "%s\n", _TRACE_STRIPPATH_(__FILE__), __func__, __LINE__, __VA_ARGS__)
 #  define TRACE(...)  TRACE_(__VA_ARGS__, "")
 #else
 #  define TRACE(...)  ((void) 0)
 #endif
-
 
 #endif  // _TRACE_H_

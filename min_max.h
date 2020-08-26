@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright 2018  Jan Chren (rindeal)
+/** * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,9 +18,7 @@
 #ifndef MIN_MAX_H_
 #define MIN_MAX_H_
 
-
 #include "pp_narg.h"
-
 
 #define MIN_BASE_(a, b)  ( ( (a) < (b) ) ? (a) : (b) )
 #define MAX_BASE_(a, b)  ( ( (a) > (b) ) ? (a) : (b) )
@@ -2888,6 +2885,5 @@
 #  undef MAX
 #endif
 #define MAX(...)  MIN_MAX_PASTE_(MIN_MAX_PASTE_(MIN_MAX_RESOLVE_, PP_NARG(__VA_ARGS__)), _)(MAX_BASE_, __VA_ARGS__)
-
 
 #endif  // MIN_MAX_H_

@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright 2018  Jan Chren (rindeal)
+/** * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -22,7 +21,6 @@
 
 #ifndef PP_NARG_H_
 #define PP_NARG_H_
-
 
 #define PP_NARG(...) \
         PP_NARG_(0, ## __VA_ARGS__, PP_NARG_RSEQ_N_())
@@ -230,6 +228,5 @@
           29,   28,   27,   26,   25,   24,   23,   22,   21,   20, \
           19,   18,   17,   16,   15,   14,   13,   12,   11,   10, \
            9,    8,    7,    6,    5,    4,    3,    2,    1,    0
-
 
 #endif  // PP_NARG_H_

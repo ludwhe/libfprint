@@ -1,4 +1,4 @@
-/*******************************************************************************
+/**
  * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
@@ -19,9 +19,7 @@
 #ifndef VFS_PROPRIETARY_ASSERT_H_
 #define VFS_PROPRIETARY_ASSERT_H_
 
-
 #include "likely.h"
-
 
 #ifndef ASSERT_PRINTF_CALL
 #  define ASSERT_PRINTF_CALL(_fmt_, ...)  fprintf(stderr, _fmt_ "\n", ##__VA_ARGS__)
@@ -57,6 +55,5 @@
 		goto ASSERT_GOTO_LABEL;                        \
 	}                                                  \
 } while(0)
-
 
 #endif  // VFS_PROPRIETARY_ASSERT_H_

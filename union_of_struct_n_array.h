@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright 2018  Jan Chren (rindeal)
+/** * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,9 +18,7 @@
 #ifndef UNION_OF_STRUCT_N_ARRAY_H_
 #define UNION_OF_STRUCT_N_ARRAY_H_
 
-
 #include "pp_narg.h"
-
 
 #define UNION_OF_STRUCT_N_FOR_EACH_1(type, name) \
         type name;
@@ -414,7 +411,6 @@
 #define UNION_OF_STRUCT_N_FOR_EACH__(N, type, ...)  UNION_OF_STRUCT_N_ARRAY_PASTE(UNION_OF_STRUCT_N_FOR_EACH_, N)(type, __VA_ARGS__)
 #define UNION_OF_STRUCT_N_FOR_EACH_(type, ...)      UNION_OF_STRUCT_N_FOR_EACH__(PP_NARG(__VA_ARGS__), type, __VA_ARGS__)
 
-
 /**
  * @brief Creates a static array with named elements
  *
@@ -450,6 +446,5 @@
 		} svarname_;\
 		type_ avarname_[PP_NARG(__VA_ARGS__)]; \
 	} uvarname_ \
-
 
 #endif  // UNION_OF_STRUCT_N_ARRAY_H_

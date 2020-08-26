@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright 2018  Jan Chren (rindeal)
+/** * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,9 +18,7 @@
 #ifndef VFS_PROPRIETARY_LIKELY_H_
 #define VFS_PROPRIETARY_LIKELY_H_
 
-
 #define LIKELY(x)    __builtin_expect(!!(x), 1)
 #define UNLIKELY(x)  __builtin_expect(!!(x), 0)
-
 
 #endif  // VFS_PROPRIETARY_LIKELY_H_

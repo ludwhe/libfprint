@@ -1,4 +1,4 @@
-/*******************************************************************************
+/**
  * Copyright 2018  Jan Chren (rindeal)
  *
  * This library is free software; you can redistribute it and/or
@@ -19,37 +19,28 @@
 #ifndef VFS_PROPRIETARY_CAPTURE_HELPER_H_
 #define VFS_PROPRIETARY_CAPTURE_HELPER_H_
 
-
 #ifndef VFS_PROPRIETARY_CAPTURE_HELPER_TIMEOUT
-#  define VFS_PROPRIETARY_CAPTURE_HELPER_TIMEOUT  30
+#define VFS_PROPRIETARY_CAPTURE_HELPER_TIMEOUT  30
 #endif
 
-
-struct __attribute__ ((__packed__)) capture_helper_api_input
-{
+struct __attribute__((__packed__)) capture_helper_api_input {
 	int img_ready_fd;
 	int img_meta_fd;
 	int img_data_fd;
 };
 
-
-enum capture_helper_img_ready_status
-{
+enum capture_helper_img_ready_status {
 	CAPTURE_HELPER_IMG_READY_OK = 0xAAAAAAAAAAAAAAAALL, // alternating bits starting with 0
 };
 
-struct __attribute__ ((__packed__)) capture_helper_api_img_ready
-{
+struct __attribute__((__packed__)) capture_helper_api_img_ready {
 	enum capture_helper_img_ready_status status;
 };
 
-
-struct __attribute__ ((__packed__)) capture_helper_api_img_metadata
-{
+struct __attribute__((__packed__)) capture_helper_api_img_metadata {
 	int img_len;
 	int img_w;
 	int img_h;
 };
-
 
 #endif // VFS_PROPRIETARY_CAPTURE_HELPER_H_
