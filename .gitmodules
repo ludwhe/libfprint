@@ -1,0 +1,4 @@
+[submodule "libfprint/drivers/vfs_proprietary"]
+	path = libfprint/drivers/vfs_proprietary
+	url = ./
+	branch = master

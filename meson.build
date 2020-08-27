@@ -113,6 +113,7 @@ default_drivers = [
 ]
 
 all_drivers = default_drivers + virtual_drivers
+all_drivers += [ 'vfs_proprietary' ]
 
 if drivers == [ 'all' ]
     drivers = all_drivers
